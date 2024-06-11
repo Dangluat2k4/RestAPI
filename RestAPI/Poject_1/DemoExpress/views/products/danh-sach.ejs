@@ -1,0 +1,17 @@
+<%- include('../inc/header') %>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+    <% listSP.forEach((row)=>{ %>
+       <tr>
+        <td><%=row.id%> </td>
+        <td><%=row.ProductName%> </td>
+        <td><%=row.Price%> </td>
+        </tr> 
+    <% }) %>
+    
+</table>
+<%- include('../inc/footer')%>

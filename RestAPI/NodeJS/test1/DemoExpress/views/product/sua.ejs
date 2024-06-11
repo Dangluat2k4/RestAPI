@@ -1,0 +1,13 @@
+<%- include('../inc/header') %>
+    <h1>Sửa</h1>
+    <p><%= msg  %></p>
+
+    <% if(objSP!= null){%>
+        <form action="" method="post">
+        Tên sản phẩm<input type="text" name="ProductName" id="ProductName" value="<%=objSP.ProductName %>">
+        Giá tiền<input type="text" name="Price" id="Price"value="<%=objSP.Price %>">
+        <button type="submit" >Cap nhat </button>
+    </form>
+   <% } %>
+
+<%- include('../inc/footer') %>

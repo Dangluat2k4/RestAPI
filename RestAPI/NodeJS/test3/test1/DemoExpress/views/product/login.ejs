@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Login</h1>
+    <table>
+        <thead>
+            <th>
+                <input placeholder="ennter name">
+                <input placeholder="enlert password">
+                <a href="http://localhost:3000/login/trangchu"><button type="submit"> login</button></a>
+            </th>
+        </thead>
+    </table>
+    <div>
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+            <% listSP.forEach( (row)=>{ %>
+                <tr>
+                    <td>
+                        <%= row._id %>
+                    </td>
+                    <td>
+                        <%= row.Name %>
+                    </td>
+                    <td>
+                        <%= row.Price %>
+                    </td>
+                </tr>
+                <% }) %>
+        </table>
+
+    </div>
+</body>
+
+</html>

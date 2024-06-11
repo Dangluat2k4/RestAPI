@@ -1,0 +1,16 @@
+<%- include('../inc/header') %>
+
+
+    <h1>Trang xem billDetail </h1>
+    <%= msg %>
+        <% if(objSP !=null){ %>
+
+
+            <h2>BillID : <%= objSP.BillID %>
+            </h2>
+            ProductID: <%= objSP.ProductID %><br>
+                Quantity: <%= objSP.Quantity %><br>
+                    <% } %>
+
+
+    <%- include('../inc/footer') %>

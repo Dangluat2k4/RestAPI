@@ -1,0 +1,15 @@
+<%- include('../inc/header') %>
+
+
+    <h1>Trang xem category </h1>
+    <%= msg %>
+        <% if(objSP !=null){ %>
+
+
+            <h2>ID : <%= objSP._id %>
+            </h2>
+            CateName: <%= objSP.CateName %><br>
+                    <% } %>
+
+
+    <%- include('../inc/footer') %>

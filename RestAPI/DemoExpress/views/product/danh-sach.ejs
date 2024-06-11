@@ -1,0 +1,35 @@
+
+<%- include('../inc/header') %>
+
+
+<table border="1">
+    <tr>
+        <th>ID</th> <th>Password</th> <th>Fullname</th> <th>Action</th>
+    </tr>
+    
+
+    <% listSP.forEach( (row)=>{ %>
+                <tr>
+                    <td>
+                        <%= row._id %>
+                    </td>
+                    <td>
+                        <%= row.Password %>
+                    </td>
+                    <td>
+                        <a href="/products/view/<%= row._id %>" target="_blank">
+                        <%= row.Fullname %>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="/products/edit/<%= row._id %>" target="_blank">
+                            Sửa
+                        </a>
+                    </td>
+                </tr>
+                <% }) %>
+   
+</table>
+
+
+<%- include('../inc/footer') %>

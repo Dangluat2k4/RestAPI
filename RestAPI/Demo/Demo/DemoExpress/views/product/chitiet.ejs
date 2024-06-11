@@ -1,0 +1,13 @@
+<%- include('../inc/header') %>
+   <h1>Trang xem chi tiết </h1>
+   <%= msg  %>
+   <% if(objSP != null){ %>
+
+
+   <h2>Tên sp: <%= objSP.PassWord  %>   </h2>
+       Giá:  <%= objSP.FullName  %>
+
+
+   <% } %>
+
+   <%- include('../inc/footer') %>

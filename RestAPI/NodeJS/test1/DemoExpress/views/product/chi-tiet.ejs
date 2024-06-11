@@ -1,0 +1,10 @@
+<%- include('../inc/header') %>
+    <h1>Trang chi tiet</h1>
+    <%= msg %>
+        <% if(objSP !=null) { %>
+            <h2>Ten sp :<%= objSP.ProductName%>
+            </h2>
+            Gia : <%= objSP.Price %>
+               <% } %>
+
+<%- include('../inc/footer') %>

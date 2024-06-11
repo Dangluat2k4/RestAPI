@@ -1,0 +1,15 @@
+<%- include('../inc/header') %>
+
+<h1>Sửa Account</h1>
+<p><%= msg %></p>
+
+<% if (objSP != null) { %>
+
+<form action="" method="post">
+    Password: <input type="text" name="Password" value="<%= objSP.Password %>">
+    Fullname: <input type="text" name="Fullname" value="<%= objSP.Fullname %>">
+    <button type="submit">Cập nhật</button>
+</form>
+<% } %>
+
+<%- include('../inc/footer') %>

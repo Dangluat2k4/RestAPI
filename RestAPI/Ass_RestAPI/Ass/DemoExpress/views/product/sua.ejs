@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <%- include('../inc/header') %>
+
+
+        <h1>Sửa sản phẩm</h1>
+        <p>
+            <%= msg %>
+        </p>
+        <% if(objSP !=null ){%>
+            <form action="" method="post" class="form-control w-75 m-lg-auto ">
+                <div class="mb-3 ">
+                    <p class="mt-2">Tên sản phẩm:</p>
+                    <input type="text" class="form-control mt-2 " name="ProductName" value="<%= objSP.ProductName %>"> <br>
+                    <p class="mt-2">Giá tiền:</p>
+                    <input type="text" class="form-control" name="Price" value="<%= objSP.Price %>"> <br>
+                    <input type="text" class="form-control" name="Description" value="<%= objSP.Description %>"> <br>
+                    <button type="submit" class="btn btn-primary ">Cập nhật</button>
+                </div>
+            </form>
+            <% } %>
+
+                <%- include('../inc/footer') %>
+</body>
+
+</html>

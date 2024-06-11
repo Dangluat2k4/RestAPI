@@ -1,0 +1,39 @@
+<%- include('../inc/header') %>
+    <table border="1">
+        <tr>
+            <th>Image</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Aciton</th>
+            <th>Action</th>
+        </tr>
+        <% listSP.forEach( (row)=>{ %>
+            <tr>
+                <td><img src="<%= row.image%>" width="50" /></td>
+                <td>
+                    <%= row._id %>
+                </td>
+                <td>
+                    <a href="/products/view/<%= row._id %>" target="_blank">
+                        <%= row.ProductName %>
+                    </a>
+
+                </td>
+                <td>
+                    <%= row.Price %>
+                </td>
+                <td>
+                    <a href="/products/edit/<%= row._id %>" target="_blank"> Sửa </a>
+                </td>
+                <td>
+                    <a href="/products/delete/<%= row._id %>"
+                        onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này?')">Xóa</a>
+
+                </td>
+            </tr>
+            <% }) %>
+    </table>
+
+
+    <%- include('../inc/footer') %>
